@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Capital Allocation Decision</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <h1>Regional Investment Allocation Decision</h1>
+    <p>Poplar Point vs Tysons Central vs Project Connect</p>
+  </header>
+
+  <section class="section">
+    <h2>Overview</h2>
+    <p>
+      Three development sites were evaluated using financial return, market risk, and public value.
+    </p>
+    <p class="highlight">
+      Final decision: <strong>Poplar Point is selected</strong> due to highest long-term public value despite lower financial return.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>Financial Comparison</h2>
+
+    <table>
+      <tr>
+        <th>Site</th>
+        <th>Base RLV</th>
+        <th>Financial Strength</th>
+      </tr>
+      <tr>
+        <td>Project Connect</td>
+        <td>$47.6M</td>
+        <td>Strongest</td>
+      </tr>
+      <tr>
+        <td>Tysons Central</td>
+        <td>$24.3M</td>
+        <td>Moderate</td>
+      </tr>
+      <tr>
+        <td>Poplar Point</td>
+        <td>$5.5M</td>
+        <td>Weakest</td>
+      </tr>
+    </table>
+  </section>
+
+  <section class="section">
+    <h2>Sensitivity Findings (Risk)</h2>
+
+    <div class="chart-container">
+      <canvas id="riskChart"></canvas>
+    </div>
+
+    <p>
+      Project Connect is the most resilient under market stress. Poplar Point is the most sensitive to downside risk (rent drops, cost increases, and higher interest rates).
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>Policy Comparison</h2>
+
+    <ul>
+      <li><strong>Poplar Point:</strong> Highest equity impact and waterfront activation</li>
+      <li><strong>Project Connect:</strong> Strengthens existing innovation corridor</li>
+      <li><strong>Tysons Central:</strong> Incremental suburban redevelopment</li>
+    </ul>
+  </section>
+
+  <section class="section final">
+    <h2>Final Recommendation</h2>
+
+    <p class="decision">
+      Invest in <strong>Poplar Point</strong>.
+    </p>
+
+    <p>
+      Despite a ~$42M opportunity cost in residual land value versus Project Connect and ~$19M versus Tysons Central,
+      Poplar Point delivers the highest long-term public value and structural regional impact.
+    </p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
