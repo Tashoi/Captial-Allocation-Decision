@@ -3,14 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <title>Capital Allocation Decision</title>
+
+  <!-- Chart.js MUST be included before script.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
   <link rel="stylesheet" href="style.css">
-</script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
 
 <body>
 
   <header class="header">
+
     <h1>Regional Investment Allocation Decision</h1>
     <p>Poplar Point vs Tysons Central vs Project Connect</p>
+
+    <!-- RISK CHART MOVED TO HEADER -->
+    <div class="chart-container">
+      <canvas id="riskChart"></canvas>
+    </div>
+
+    <p class="subtitle">
+      Sensitivity Analysis: Residual Land Value under market stress scenarios
+    </p>
+
   </header>
 
   <section class="section">
@@ -51,18 +66,6 @@
   </section>
 
   <section class="section">
-    <h2>Sensitivity Findings (Risk)</h2>
-
-    <div class="chart-container">
-      <canvas id="riskChart"></canvas>
-    </div>
-
-    <p>
-      Project Connect is the most resilient under market stress. Poplar Point is the most sensitive to downside risk (rent drops, cost increases, and higher interest rates).
-    </p>
-  </section>
-
-  <section class="section">
     <h2>Policy Comparison</h2>
 
     <ul>
@@ -80,8 +83,7 @@
     </p>
 
     <p>
-      Despite a ~$42M opportunity cost in residual land value versus Project Connect and ~$19M versus Tysons Central,
-      Poplar Point delivers the highest long-term public value and structural regional impact.
+      This decision prioritizes long-term structural transformation over short-term financial return.
     </p>
   </section>
 
