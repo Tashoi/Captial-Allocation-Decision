@@ -1,44 +1,66 @@
-const ctx = document.getElementById('riskChart');
+document.addEventListener("DOMContentLoaded", function () {
 
-new Chart(ctx, {
-    type: 'line',
-    data: {
-        labels: ['Base Case', 'Rent Drop', 'Cost Increase', 'Rate Increase'],
-        datasets: [
-            {
-                label: 'Project Connect',
-                data: [47.6, 40, 38, 35],
-                borderColor: 'green',
-                tension: 0
-            },
-            {
-                label: 'Tysons Central',
-                data: [24.3, 15, 10, -2.5],
-                borderColor: 'orange',
-                tension: 0
-            },
-            {
-                label: 'Poplar Point',
-                data: [5.5, -12.9, -12.4, -21.6],
-                borderColor: 'red',
-                tension: 0
-            }
-        ]
-    },
-    options: {
-        responsive: true,
-        plugins: {
-            legend: {
-                display: true
-            }
+    const canvas = document.getElementById('riskChart');
+
+    // Safety check (prevents silent failures)
+    if (!canvas) {
+        console.error("riskChart canvas not found");
+        return;
+    }
+
+    const ctx = canvas.getContext('2d');
+
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['Base Case', 'Rent -5%', 'Cost +10%', 'Rate +100bps'],
+            datasets: [
+                {
+                    label: 'Project Connect',
+                    data: [47.6, 40, 38, 35],
+                    borderColor: 'green',
+                    tension: 0,
+                    fill: false
+                },
+                {
+                    label: 'Tysons Central',
+                    data: [24.3, 15, 10, -2.5],
+                    borderColor: 'orange',
+                    tension: 0,
+                    fill: false
+                },
+                {
+                    label: 'Poplar Point',
+                    data: [5.5, -12.9, -12.4, -21.6],
+                    borderColor: 'red',
+                    tension: 0,
+                    fill: false
+                }
+            ]
         },
-        scales: {
-            y: {
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+
+            plugins: {
+                legend: {
+                    display: true
+                },
                 title: {
                     display: true,
-                    text: 'Residual Land Value ($M)'
+                    text: 'Sensitivity Analysis: Residual Land Value ($M)'
+                }
+            },
+
+            scales: {
+                y: {
+                    title: {
+                        display: true,
+                        text: 'RLV ($ Millions)'
+                    }
                 }
             }
         }
-    }
+    });
+
 });
