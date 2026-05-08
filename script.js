@@ -2,9 +2,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const canvas = document.getElementById('riskChart');
 
-    // Safety check (prevents silent failures)
     if (!canvas) {
-        console.error("riskChart canvas not found");
+        console.error("riskChart not found");
         return;
     }
 
@@ -13,7 +12,12 @@ document.addEventListener("DOMContentLoaded", function () {
     new Chart(ctx, {
         type: 'line',
         data: {
-            labels: ['Base Case', 'Rent -5%', 'Cost +10%', 'Rate +100bps'],
+            labels: [
+                'Base Case',
+                'Rent -5%',
+                'Cost +10%',
+                'Rate +100bps'
+            ],
             datasets: [
                 {
                     label: 'Project Connect',
@@ -48,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 },
                 title: {
                     display: true,
-                    text: 'Sensitivity Analysis: Residual Land Value ($M)'
+                    text: 'Sensitivity Analysis (RLV in $M)'
                 }
             },
 
@@ -56,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 y: {
                     title: {
                         display: true,
-                        text: 'RLV ($ Millions)'
+                        text: 'Residual Land Value ($M)'
                     }
                 }
             }
